@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="B_salary" placeholder="Enter Employe salary"><br><br>
+    <input type="button" value="Calculate Salary" onclick="netSalary_f()"><br><br>
+    <div id="result" >see here...</div>
+</body>
+
+<script>
+function netSalary_f()     
+    {   var salary=B_salary.value
+        var as=B_salary.value*12
+        var tax=(as*30)/100
+        var netSalary=as-tax           
+        var output=`<table width="30%" border="1" cellpadding="5" cellspacing="0" >
+                  <caption>Annual Salary</caption>
+                  <tr><th>Salary</th><td>${salary}</td></tr>
+                  <tr><th>Annual Salary</th><td>${as}</td></tr>
+                  <tr><th>Tax[30%]</th><td>${tax}</td></tr>
+                  <tr><th>Net Annual Salary</th><td>${netSalary}</td></tr>
+              </table> `
+              result.innerHTML=output
+} 
+</script>
+</html>
